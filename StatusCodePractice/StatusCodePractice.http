@@ -1,0 +1,6 @@
+@StatusCodePractice_HostAddress = http://localhost:5075
+
+GET {{StatusCodePractice_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -50,4 +50,22 @@ public class StatusCodeController : ControllerBase
         }
         return Ok(student);
     }
+    
+    [HttpPost]
+    public IActionResult CreateStudent(Student student)
+    {
+        if (student == null)
+        {
+            return BadRequest("Student is null");
+        }
+
+        if (students.Any(s => s.Id == student.Id))
+        {
+            return Conflict();
+        }
+
+        students.Add(student);
+        
+        return CreatedAtAction(nameof(GetStudents), new { id = student.Id }, student);
+    }
 }

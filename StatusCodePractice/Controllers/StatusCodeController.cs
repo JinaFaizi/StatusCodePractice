@@ -17,16 +17,47 @@ public class StatusCodeController : ControllerBase
             Id = 1,
             Name = "Jina1",
             Age = 20,
-            Major = "Computer Engineering"
+            Major = "Computer Engineering",
+            
+            Courses = new List<Course>{
+            new Course {
+            Id = 1,
+            Name = "C# Programming",
+            Units = 3
+            
+        },
+             new Course
+        {
+                 Id = 2,
+                 Name = "C# Programming",
+                 Units = 4
+        }
+        }
 
         },
 
-        new Student
+             new Student
         {
-            Id = 2,
-            Name = "Jina2",
-            Age = 20,
-            Major = "Computer Engineering"
+                    Id = 2,
+                    Name = "Jina2",
+                    Age = 20,
+                    Major = "Computer Engineering",
+                    
+            Courses = new List<Course> {
+                    new Course
+                    {
+                    Id = 3,
+                    Name = "Algorithms",
+                    Units = 3
+        },
+                new Course
+        {
+                     Id = 4,
+                     Name = "Computer Architecture",
+                     Units = 3
+        }
+                    
+                    }
         },
 
          new Student
@@ -34,7 +65,21 @@ public class StatusCodeController : ControllerBase
              Id = 3,
              Name = "Jina3",
              Age = 20,
-             Major = "Computer Engineering"
+             Major = "Computer Engineering",
+             
+             Courses = new List<Course> {
+             new Course {
+             Id = 5,
+             Name = "Operating Systems",
+             Units = 3
+         },
+             new Course
+             {
+                 Id = 6,
+                 Name = "Computer Architecture",
+                 Units = 3
+             }
+         }
          }
     };
 

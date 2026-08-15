@@ -95,6 +95,17 @@ public class StatusCodeController : ControllerBase
         }
         return Ok(student);
     }
+
+    [HttpGet("{studentId}/courses")]
+    public IActionResult GetCourses(int studentId)
+    {
+        var student = students.FirstOrDefault(s => s.Id == studentId);
+        if (student == null)
+        {
+            return NotFound();
+        }
+        return Ok(student.Courses);
+    }
     
     [HttpPost]
     public IActionResult CreateStudent(Student student)
